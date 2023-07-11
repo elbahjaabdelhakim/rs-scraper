@@ -23,3 +23,7 @@ app.use(Sentry.Handlers.errorHandler());
 app.listen(process.env.PORT || 2000, () =>
   console.log("Server started on port :", process.env.PORT || 2000)
 );
+
+app.get('/test-api',(req, res) => {
+  res.send('application scraper is running');
+})
